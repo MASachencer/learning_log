@@ -1,0 +1,16 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+<p>主题： {{ topic }}</p>
+<p>项目：</p>
+<ul>
+{% for entry in entries %}
+    <li>
+        <p>{{ entry.date_added|date:'Y-m-d H:i' }}</p>
+        <p>{{ entry.text|linebreaks }}</p>
+    </li>
+    {% empty %}
+    <li>此主题还没有项目。</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

@@ -1,4 +1,6 @@
 .python-version
-.vscode/*
+.vscode*
 *__pycache__*
 *.pyc
+*.sqlite3
+*migrations*
