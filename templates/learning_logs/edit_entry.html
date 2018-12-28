@@ -4,12 +4,12 @@
 
 <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
 
-<p>添加一个新条目</p>
+<p>编辑条目</p>
 
-<form action="{% url 'learning_logs:new_entry' topic.id %}" method="post">
+<form action="{% url 'learning_logs:edit_entry' entry.id %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit">添加条目</button>
+    <button name="submit">保存修改</button>
 </form>
 
 {% endblock content %}
