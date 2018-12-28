@@ -5,6 +5,8 @@
 <p>主题： {{ topic }}</p>
 <p>项目：</p>
 
+<p><a href="{% url 'learning_logs:new_entry' topic.id %}">添加新项目</a></p>
+
 <ul>
 {% for entry in entries %}
     <li>
