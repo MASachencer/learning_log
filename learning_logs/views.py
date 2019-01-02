@@ -12,11 +12,13 @@ def index(request):
     '''学习笔记的主页'''
     return render(request, 'learning_logs/index.html')
 
+
 def topics(request):
     '''显示所有的主题'''
     topics = Topic.objects.order_by('date_added')
     contex = {'topics': topics}
     return render(request, 'learning_logs/topics.html', contex)
+
 
 def topic(request, topic_id):
     '''显示单个主题及其所有的条目'''
