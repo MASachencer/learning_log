@@ -1,4 +1,4 @@
-# 定义learning_logs的url模式
+# 定义应用程序learning_logs的url模式
 
 from django.conf.urls import url
 from . import views
